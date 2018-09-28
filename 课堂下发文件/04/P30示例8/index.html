@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        #txt_show {
+            display: none;
+            color: #00C;
+        }
+        
+        #txt_hide {
+            display: block;
+            color: #F30;
+        }
+    </style>
+
+
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("[name=show]").click(function() {
+                $("p:hidden").show();
+
+            });
+
+        });
+        $(document).ready(function() {
+            $("[name=hide]").click(function() {
+                $("p:visible").hide();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <p id="txt_hide">点击按钮,我会被隐藏哦~</p>
+    <p id="txt_show">我又会出现</p>
+    <input name="show" type="button" value="点击显示文字" class="show" />
+    <input name="hide" type="button" value="点击隐藏文字" class="show" />
+</body>
+
+</html>
